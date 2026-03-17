@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Balance Score Calculator — Free Self-Assessment | nuvo.coach</title>
+<meta name="description" content="Calculate your Life Balance Score in 2 minutes. Rate your happiness, health, and wealth to discover where your life is thriving and where it needs attention. Free, science-backed assessment.">
+<meta name="keywords" content="life balance score, life assessment, wellness quiz, life coaching, happiness test, work life balance, self improvement, life satisfaction, wellbeing assessment">
+<meta property="og:title" content="What's Your Life Balance Score?">
+<meta property="og:description" content="A free 2-minute assessment that measures your life across 3 pillars: Happy, Healthy, Wealthy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harmrietmeijer.github.io/life-balance-framework/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What's Your Life Balance Score?">
+<meta name="twitter:description" content="Free 2-minute life assessment across 3 pillars: Happy, Healthy, Wealthy.">
+<link rel="canonical" href="https://harmrietmeijer.github.io/life-balance-framework/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f1117;color:#e2e8f0;min-height:100vh}
+.container{max-width:680px;margin:0 auto;padding:24px 16px}
+h1{font-size:2rem;text-align:center;margin:32px 0 8px;line-height:1.2}
+.subtitle{text-align:center;color:#94a3b8;font-size:1.1rem;margin-bottom:32px}
+.highlight-green{color:#10B981}.highlight-purple{color:#8B5CF6}.highlight-orange{color:#FF6A00}
+.pillar-section{background:#1a1d27;border-radius:16px;padding:24px;margin-bottom:20px;border:1px solid #2a2d3a}
+.pillar-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.pillar-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
+.pillar-title{font-size:1.25rem;font-weight:700}
+.question{margin-bottom:16px}
+.question label{display:block;font-size:0.95rem;color:#cbd5e1;margin-bottom:8px}
+.slider-row{display:flex;align-items:center;gap:12px}
+.slider-row input[type=range]{flex:1;-webkit-appearance:none;height:6px;border-radius:3px;background:#2a2d3a;outline:none}
+.slider-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;cursor:pointer}
+.green input::-webkit-slider-thumb{background:#10B981}
+.purple input::-webkit-slider-thumb{background:#8B5CF6}
+.orange input::-webkit-slider-thumb{background:#FF6A00}
+.slider-val{font-size:1.1rem;font-weight:700;min-width:28px;text-align:center}
+.result-card{background:linear-gradient(135deg,#1a1d27,#252836);border-radius:16px;padding:32px;text-align:center;border:1px solid #2a2d3a;margin-top:24px}
+.score-circle{width:160px;height:160px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;flex-direction:column;border:4px solid #2a2d3a;position:relative}
+.score-number{font-size:3rem;font-weight:800;line-height:1}
+.score-label{font-size:0.8rem;color:#94a3b8;margin-top:4px}
+.pillar-bars{display:flex;justify-content:center;gap:24px;margin:24px 0}
+.bar-item{text-align:center}
+.bar-track{width:48px;height:120px;background:#2a2d3a;border-radius:8px;position:relative;overflow:hidden;margin:8px auto}
+.bar-fill{position:absolute;bottom:0;width:100%;border-radius:8px;transition:height .6s ease}
+.bar-label{font-size:0.8rem;color:#94a3b8}
+.bar-score{font-size:1rem;font-weight:700}
+.interpretation{margin:20px 0;font-size:1rem;color:#cbd5e1;line-height:1.6}
+.cta-btn{display:inline-block;background:linear-gradient(135deg,#10B981,#8B5CF6);color:#fff;text-decoration:none;padding:16px 40px;border-radius:50px;font-size:1.1rem;font-weight:700;margin-top:16px;transition:transform .2s,box-shadow .2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.3)}
+.footer{text-align:center;margin-top:40px;padding:20px;color:#64748b;font-size:0.85rem}
+.footer a{color:#8B5CF6;text-decoration:none}
+.badge{display:inline-block;background:#1a1d27;border:1px solid #2a2d3a;border-radius:20px;padding:4px 12px;font-size:0.75rem;color:#94a3b8;margin-bottom:16px}
+@media(max-width:480px){h1{font-size:1.5rem}.container{padding:16px 12px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div style="text-align:center"><span class="badge">Free &middot; 2 minutes &middot; Science-backed</span></div>
+<h1>What's Your <span class="highlight-green">Life</span> <span class="highlight-purple">Balance</span> <span class="highlight-orange">Score</span>?</h1>
+<p class="subtitle">Rate 15 areas across 3 pillars. Discover where you're thriving — and what needs attention.</p>
+
+<div class="pillar-section green">
+<div class="pillar-header"><div class="pillar-dot" style="background:#10B981"></div><div class="pillar-title highlight-green">Happy</div></div>
+<div class="question"><label>I feel a sense of purpose and meaning</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="happy"><span class="slider-val highlight-green">5</span></div></div>
+<div class="question"><label>I have strong, supportive relationships</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="happy"><span class="slider-val highlight-green">5</span></div></div>
+<div class="question"><label>I manage stress effectively</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="happy"><span class="slider-val highlight-green">5</span></div></div>
+<div class="question"><label>I experience joy and gratitude regularly</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="happy"><span class="slider-val highlight-green">5</span></div></div>
+<div class="question"><label>I feel connected to a community</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="happy"><span class="slider-val highlight-green">5</span></div></div>
+</div>
+
+<div class="pillar-section purple">
+<div class="pillar-header"><div class="pillar-dot" style="background:#8B5CF6"></div><div class="pillar-title highlight-purple">Healthy</div></div>
+<div class="question"><label>I exercise regularly (3+ times per week)</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="healthy"><span class="slider-val highlight-purple">5</span></div></div>
+<div class="question"><label>I sleep well and wake up feeling rested</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="healthy"><span class="slider-val highlight-purple">5</span></div></div>
+<div class="question"><label>I eat nutritious meals consistently</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="healthy"><span class="slider-val highlight-purple">5</span></div></div>
+<div class="question"><label>I have good energy throughout the day</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="healthy"><span class="slider-val highlight-purple">5</span></div></div>
+<div class="question"><label>I take care of my mental health</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="healthy"><span class="slider-val highlight-purple">5</span></div></div>
+</div>
+
+<div class="pillar-section orange">
+<div class="pillar-header"><div class="pillar-dot" style="background:#FF6A00"></div><div class="pillar-title highlight-orange">Wealthy</div></div>
+<div class="question"><label>I feel financially secure</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="wealthy"><span class="slider-val highlight-orange">5</span></div></div>
+<div class="question"><label>I'm growing professionally or building skills</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="wealthy"><span class="slider-val highlight-orange">5</span></div></div>
+<div class="question"><label>I have a clear financial plan for the future</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="wealthy"><span class="slider-val highlight-orange">5</span></div></div>
+<div class="question"><label>My work aligns with my values and strengths</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="wealthy"><span class="slider-val highlight-orange">5</span></div></div>
+<div class="question"><label>I'm building assets or income streams</label><div class="slider-row"><input type="range" min="1" max="10" value="5" data-pillar="wealthy"><span class="slider-val highlight-orange">5</span></div></div>
+</div>
+
+<div class="result-card" id="result">
+<div class="score-circle" id="scoreCircle">
+<div class="score-number" id="scoreNum">5.0</div>
+<div class="score-label">Life Balance Score</div>
+</div>
+<div class="pillar-bars">
+<div class="bar-item"><div class="bar-label">Happy</div><div class="bar-track"><div class="bar-fill" id="barHappy" style="height:50%;background:#10B981"></div></div><div class="bar-score highlight-green" id="valHappy">5.0</div></div>
+<div class="bar-item"><div class="bar-label">Healthy</div><div class="bar-track"><div class="bar-fill" id="barHealthy" style="height:50%;background:#8B5CF6"></div></div><div class="bar-score highlight-purple" id="valHealthy">5.0</div></div>
+<div class="bar-item"><div class="bar-label">Wealthy</div><div class="bar-track"><div class="bar-fill" id="barWealthy" style="height:50%;background:#FF6A00"></div></div><div class="bar-score highlight-orange" id="valWealthy">5.0</div></div>
+</div>
+<p class="interpretation" id="interpretation">Move the sliders above to see your personalized results.</p>
+<a href="https://nuvo.coach" class="cta-btn" target="_blank">Get Free AI Coaching →</a>
+<p style="margin-top:12px;font-size:0.85rem;color:#64748b">Personalized guidance based on your score. No signup required.</p>
+</div>
+
+<div class="footer">
+<p>The Life Balance Framework is open source &amp; free to use.</p>
+<p><a href="https://github.com/harmrietmeijer/life-balance-framework">GitHub</a> &middot; <a href="https://nuvo.coach">nuvo.coach</a></p>
+</div>
+</div>
+
+<script>
+const sliders=document.querySelectorAll('input[type=range]');
+function update(){
+const scores={happy:[],healthy:[],wealthy:[]};
+sliders.forEach(s=>{
+s.nextElementSibling.textContent=s.value;
+scores[s.dataset.pillar].push(+s.value);
+});
+const avg=arr=>arr.reduce((a,b)=>a+b,0)/arr.length;
+const h=avg(scores.happy),he=avg(scores.healthy),w=avg(scores.wealthy);
+const lbs=((h+he+w)/3).toFixed(1);
+document.getElementById('scoreNum').textContent=lbs;
+document.getElementById('valHappy').textContent=h.toFixed(1);
+document.getElementById('valHealthy').textContent=he.toFixed(1);
+document.getElementById('valWealthy').textContent=w.toFixed(1);
+document.getElementById('barHappy').style.height=(h*10)+'%';
+document.getElementById('barHealthy').style.height=(he*10)+'%';
+document.getElementById('barWealthy').style.height=(w*10)+'%';
+const vals=[h,he,w];
+const names=['Happy','Healthy','Wealthy'];
+const gap=Math.max(...vals)-Math.min(...vals);
+const lowest=names[vals.indexOf(Math.min(...vals))];
+const circle=document.getElementById('scoreCircle');
+const pct=lbs/10;
+const r=Math.round(16+(pct*0));
+const g=Math.round(185*pct);
+const b=Math.round(129+(pct*50));
+circle.style.borderColor=lbs>=7?'#10B981':lbs>=5?'#8B5CF6':'#FF6A00';
+let text='';
+if(lbs>=8)text='Excellent balance! You\'re thriving across all three pillars. Keep up the momentum.';
+else if(lbs>=6)text='Good foundation. Your <strong>'+lowest+'</strong> pillar could use some attention — small improvements here will have the biggest impact.';
+else if(lbs>=4)text='Room for growth. Focus on your <strong>'+lowest+'</strong> pillar this week. Even one small daily action can shift your score.';
+else text='Time for a reset. Start with just one micro-habit for your <strong>'+lowest+'</strong> pillar. Two minutes a day is enough to begin.';
+if(gap>=3)text+=' <br><br>⚠️ Your pillar gap is <strong>'+gap.toFixed(1)+'</strong> points — this signals significant imbalance.';
+document.getElementById('interpretation').innerHTML=text;
+}
+sliders.forEach(s=>s.addEventListener('input',update));
+update();
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Life Balance Score Calculator","description":"Free 2-minute self-assessment that measures your life balance across three pillars: Happy, Healthy, and Wealthy.","url":"https://harmrietmeijer.github.io/life-balance-framework/","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"nuvo.coach","url":"https://nuvo.coach"}}
+</script>
+</body>
+</html>
