@@ -4,15 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Life Balance Score Calculator — Free Self-Assessment | nuvo.coach</title>
-<meta name="description" content="Calculate your Life Balance Score in 2 minutes. Rate your happiness, health, and wealth to discover where your life is thriving and where it needs attention. Free, science-backed assessment.">
-<meta name="keywords" content="life balance score, life assessment, wellness quiz, life coaching, happiness test, work life balance, self improvement, life satisfaction, wellbeing assessment">
-<meta property="og:title" content="What's Your Life Balance Score?">
-<meta property="og:description" content="A free 2-minute assessment that measures your life across 3 pillars: Happy, Healthy, Wealthy.">
+<meta name="description" content="Calculate your Life Balance Score in 2 minutes. Rate your happiness, health, and wealth to discover where your life is thriving and where it needs attention. Free, science-backed assessment by nuvo.coach.">
+<meta name="keywords" content="life balance score, life balance calculator, life balance framework, life assessment, wellness quiz, life coaching, happiness test, work life balance, self improvement, life satisfaction, wellbeing assessment, wheel of life, life coach app, free life coach, AI life coach, happy healthy wealthy, nuvo coach, personal development quiz, productivity assessment, habit tracker, goal setting, mindset coach, self-care assessment, life goals, self-discovery test, life balance test, life quality score, holistic wellness, mental wellness, personal growth, life design, life audit, fulfillment score">
+<meta name="author" content="Harm Rietmeijer">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#10B981">
+<meta property="og:title" content="What's Your Life Balance Score? — Free 2-Min Quiz">
+<meta property="og:description" content="A free 2-minute assessment that measures your life across 3 pillars: Happy, Healthy, Wealthy. Discover where you're thriving — and what needs attention.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harmrietmeijer.github.io/life-balance-framework/">
+<meta property="og:site_name" content="Life Balance Framework">
+<meta property="og:image" content="https://harmrietmeijer.github.io/life-balance-framework/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Life Balance Score Calculator — Happy, Healthy, Wealthy">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What's Your Life Balance Score?">
-<meta name="twitter:description" content="Free 2-minute life assessment across 3 pillars: Happy, Healthy, Wealthy.">
+<meta name="twitter:title" content="What's Your Life Balance Score? — Free 2-Min Quiz">
+<meta name="twitter:description" content="Free 2-minute life assessment across 3 pillars: Happy, Healthy, Wealthy. Discover where your life is balanced and where it needs work.">
+<meta name="twitter:image" content="https://harmrietmeijer.github.io/life-balance-framework/og-image.jpg">
+<meta name="twitter:site" content="@nuvocoach">
+<meta name="twitter:creator" content="@harmrietmeijer">
 <link rel="canonical" href="https://harmrietmeijer.github.io/life-balance-framework/">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -47,6 +58,11 @@ h1{font-size:2rem;text-align:center;margin:32px 0 8px;line-height:1.2}
 .interpretation{margin:20px 0;font-size:1rem;color:#cbd5e1;line-height:1.6}
 .cta-btn{display:inline-block;background:linear-gradient(135deg,#10B981,#8B5CF6);color:#fff;text-decoration:none;padding:16px 40px;border-radius:50px;font-size:1.1rem;font-weight:700;margin-top:16px;transition:transform .2s,box-shadow .2s}
 .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.3)}
+.share-section{margin-top:24px;border-top:1px solid #2a2d3a;padding-top:20px}
+.share-label{color:#64748b;font-size:0.85rem;margin-bottom:12px}
+.share-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.share-btn{border:none;padding:10px 22px;border-radius:50px;cursor:pointer;font-weight:700;font-size:0.9rem;transition:opacity .2s}
+.share-btn:hover{opacity:0.85}
 .footer{text-align:center;margin-top:40px;padding:20px;color:#64748b;font-size:0.85rem}
 .footer a{color:#8B5CF6;text-decoration:none}
 .badge{display:inline-block;background:#1a1d27;border:1px solid #2a2d3a;border-radius:20px;padding:4px 12px;font-size:0.75rem;color:#94a3b8;margin-bottom:16px}
@@ -99,6 +115,15 @@ h1{font-size:2rem;text-align:center;margin:32px 0 8px;line-height:1.2}
 <p class="interpretation" id="interpretation">Move the sliders above to see your personalized results.</p>
 <a href="https://nuvo.coach" class="cta-btn" target="_blank">Get Free AI Coaching →</a>
 <p style="margin-top:12px;font-size:0.85rem;color:#64748b">Personalized guidance based on your score. No signup required.</p>
+
+<div class="share-section">
+<p class="share-label">Share your Life Balance Score 👇</p>
+<div class="share-buttons">
+  <button onclick="shareTwitter()" class="share-btn" style="background:#000;color:#fff">𝕏 Share on X</button>
+  <button onclick="shareWhatsApp()" class="share-btn" style="background:#25D366;color:#fff">💬 WhatsApp</button>
+  <button onclick="copyScore()" class="share-btn" style="background:#2a2d3a;color:#e2e8f0;border:1px solid #3a3d4a" id="copyBtn">📋 Copy Score</button>
+</div>
+</div>
 </div>
 
 <div class="footer">
@@ -130,10 +155,6 @@ const names=['Happy','Healthy','Wealthy'];
 const gap=Math.max(...vals)-Math.min(...vals);
 const lowest=names[vals.indexOf(Math.min(...vals))];
 const circle=document.getElementById('scoreCircle');
-const pct=lbs/10;
-const r=Math.round(16+(pct*0));
-const g=Math.round(185*pct);
-const b=Math.round(129+(pct*50));
 circle.style.borderColor=lbs>=7?'#10B981':lbs>=5?'#8B5CF6':'#FF6A00';
 let text='';
 if(lbs>=8)text='Excellent balance! You\'re thriving across all three pillars. Keep up the momentum.';
@@ -145,10 +166,31 @@ document.getElementById('interpretation').innerHTML=text;
 }
 sliders.forEach(s=>s.addEventListener('input',update));
 update();
+
+function getShareText(){
+const score=document.getElementById('scoreNum').textContent;
+const happy=document.getElementById('valHappy').textContent;
+const healthy=document.getElementById('valHealthy').textContent;
+const wealthy=document.getElementById('valWealthy').textContent;
+return 'My Life Balance Score: '+score+'/10\n🟢 Happy: '+happy+' | 🟣 Healthy: '+healthy+' | 🟠 Wealthy: '+wealthy+'\n\nWhat\'s yours? Free 2-min quiz → https://harmrietmeijer.github.io/life-balance-framework/\n#LifeBalance #HappyHealthyWealthy #nuvocoach';
+}
+function shareTwitter(){
+window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText()),'_blank');
+}
+function shareWhatsApp(){
+window.open('https://wa.me/?text='+encodeURIComponent(getShareText()),'_blank');
+}
+function copyScore(){
+navigator.clipboard.writeText(getShareText()).then(function(){
+const btn=document.getElementById('copyBtn');
+btn.textContent='✅ Copied!';
+setTimeout(function(){btn.textContent='📋 Copy Score';},2000);
+});
+}
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Life Balance Score Calculator","description":"Free 2-minute self-assessment that measures your life balance across three pillars: Happy, Healthy, and Wealthy.","url":"https://harmrietmeijer.github.io/life-balance-framework/","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"nuvo.coach","url":"https://nuvo.coach"}}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Life Balance Score Calculator","description":"Free 2-minute self-assessment that measures your life balance across three pillars: Happy, Healthy, and Wealthy.","url":"https://harmrietmeijer.github.io/life-balance-framework/","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Harm Rietmeijer","url":"https://nuvo.coach"},"publisher":{"@type":"Organization","name":"nuvo.coach","url":"https://nuvo.coach"}}
 </script>
 </body>
 </html>
