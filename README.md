@@ -1,8 +1,21 @@
 # Life Balance Framework
 
-**A science-backed approach to measuring and improving your overall life satisfaction across three core pillars.**
+**A science-backed open-source framework for measuring and improving life satisfaction across three core pillars: Happy · Healthy · Wealthy.**
 
-Most people optimize for one area of life while neglecting the others. You might be crushing it at work but your health is suffering. Or you're physically fit but financially stressed. The Life Balance Framework helps you see the full picture.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Try it free](https://img.shields.io/badge/Try_it_free-nuvo.coach-blueviolet)](https://nuvo.coach/score)
+[![Interactive Calculator](https://img.shields.io/badge/Interactive_Calculator-Live-brightgreen)](https://harmrietmeijer.github.io/life-balance-framework/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+> **⚡ Get your automated Life Balance Score in 2 minutes — free, no signup → [nuvo.coach/score](https://nuvo.coach/score)**
+
+---
+
+Most people optimize for one area of life while neglecting the others. You might be crushing it at work but your health is suffering. Or you're physically fit but financially stressed. The Life Balance Framework helps you **see the full picture** and take action.
+
+**Related topics:** life balance · work-life balance · self-assessment · life satisfaction · happiness framework · wellness tracking · financial wellbeing · personal development · habit tracking · life coaching · behavioral science · positive psychology
+
+---
 
 ## The Three Pillars
 
@@ -14,17 +27,29 @@ Most people optimize for one area of life while neglecting the others. You might
 
 True life balance isn't about perfection in each area — it's about **awareness** of where you stand and **intentional progress** across all three.
 
+---
+
+## Try the Interactive Calculator
+
+👉 **[Open the interactive Life Balance Score Calculator](https://harmrietmeijer.github.io/life-balance-framework/)** — runs in your browser, no data sent anywhere.
+
+Or get AI-powered coaching with your score at **[nuvo.coach/score](https://nuvo.coach/score)** (free, no signup).
+
+---
+
 ## Your Life Balance Score
 
-Your Life Balance Score (LBS) is a single number from 1-10 that represents how balanced your life currently is across all three pillars. Research in positive psychology suggests that people who actively monitor multiple life domains report higher overall satisfaction.
+Your Life Balance Score (LBS) is a single number from 1–10 that represents how balanced your life currently is across all three pillars. Research in positive psychology suggests that people who actively monitor multiple life domains report higher overall satisfaction.
 
 ### How it works
 
-1. **Rate each pillar** from 1-10 based on your current satisfaction
+1. **Rate each pillar** from 1–10 based on your current satisfaction
 2. **Identify the gap** between your highest and lowest pillar
 3. **Focus on the lowest pillar** — small improvements here have the biggest impact on overall wellbeing
 
 The framework is based on research from positive psychology, behavioral science, and coaching methodology including Seligman's PERMA model, the COM-B behavior change framework, and BJ Fogg's Tiny Habits approach.
+
+---
 
 ## Quick Self-Assessment
 
@@ -74,12 +99,14 @@ Life Balance Score = (Happy + Healthy + Wealthy) / 3
 
 | Score | Interpretation |
 |-------|---------------|
-| 8-10 | Excellent balance — maintain and fine-tune |
-| 6-7.9 | Good foundation — identify your weakest pillar |
-| 4-5.9 | Room for growth — focus on bringing up your lowest area |
-| 1-3.9 | Time for change — start with one small habit in your weakest pillar |
+| 8–10 | Excellent balance — maintain and fine-tune |
+| 6–7.9 | Good foundation — identify your weakest pillar |
+| 4–5.9 | Room for growth — focus on bringing up your lowest area |
+| 1–3.9 | Time for change — start with one small habit in your weakest pillar |
 
 **The most important insight:** Look at the gap between your highest and lowest pillar. A gap of 3+ points signals significant imbalance.
+
+---
 
 ## The Science Behind It
 
@@ -90,6 +117,9 @@ The framework draws on several evidence-based approaches:
 - **Tiny Habits** (BJ Fogg) — Small, consistent actions compound into major life improvements
 - **MINDSPACE** — Behavioral nudges that help make lasting changes
 - **Endowed Progress Effect** — Tracking progress motivates continued effort
+- **Wheel of Life** — Holistic life assessment across multiple domains
+
+---
 
 ## Action Framework: The Weekly Check-In
 
@@ -109,13 +139,28 @@ Once you know your scores, use this weekly practice:
 
 **🟠 Wealthy:** Read 10 pages of a professional development book. Review your budget for 5 minutes. Learn one new skill on YouTube.
 
+---
+
+## Community
+
+📊 **[Join the community baseline study](https://github.com/harmrietmeijer/life-balance-framework/issues/1)** — share your Life Balance Score and see how others score across the three pillars.
+
+Share your journey on social: tag **#LifeBalanceScore**
+
+Follow **[@nuvo.coach](https://instagram.com/nuvo.coach)** on Instagram for daily life balance tips.
+
+---
+
 ## Tools & Resources
 
-### Automated Life Balance Score
+### AI-Powered Life Balance Coaching
 
-Want to track your Life Balance Score with AI-powered insights and personalized coaching?
-
-**[nuvo.coach](https://nuvo.coach)** — A free AI life coaching app that calculates your Life Balance Score and provides weekly guidance across all three pillars. Used by 10,000+ people.
+**[nuvo.coach](https://nuvo.coach)** — A free AI life coaching app that:
+- Calculates your Life Balance Score automatically
+- Assigns you one of 6 specialized AI coaches based on your profile
+- Provides daily personalized guidance across all three pillars
+- Tracks your progress week over week
+- Available on iOS (Android coming soon) — free with optional Pro upgrade
 
 ### Recommended Reading
 
@@ -123,11 +168,9 @@ Want to track your Life Balance Score with AI-powered insights and personalized 
 - *Atomic Habits* by James Clear
 - *The Psychology of Money* by Morgan Housel
 - *Why We Sleep* by Matthew Walker
+- *Ikigai* by Héctor García & Francesc Miralles
 
-### Community
-
-- Share your Life Balance Score journey: tag **#LifeBalanceScore** on social media
-- Follow [@nuvo.coach](https://instagram.com/nuvo.coach) for daily tips
+---
 
 ## Contributing
 
@@ -139,6 +182,8 @@ This framework is open source and community-driven. We welcome:
 - Micro-action suggestions for each pillar
 
 Please open an issue or submit a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+---
 
 ## License
 
